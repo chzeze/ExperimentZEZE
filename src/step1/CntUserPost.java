@@ -57,7 +57,7 @@ public class CntUserPost {
 				ss = string.split("\\}\\|\\|\\}");
 				if (UserCnt.containsKey(ss[1])) {// 存在用户名
 					tempCnt = UserCnt.get(ss[1]) + 1;
-					UserCnt.put(ss[1], tempCnt);// 数目加一
+					UserCnt.put(ss[1], tempCnt);// 数目加1
 				}
 				else {
 					UserCnt.put(ss[1], 1);

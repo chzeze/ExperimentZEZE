@@ -29,7 +29,7 @@ public class SubgraphProcess1 {
 		String destFileName1 = messDir+"SubgraphProcess1\\user_id_pair.txt";// args[1];//user_id_pair.txt
 		String destFileName2 = messDir+"SubgraphProcess1\\user_name_id.txt";// args[2];//user_name_id.txt
 		String destFileName3 = messDir+"SubgraphProcess1\\usercount.txt";// args[3];//usercount.txt
-		String destFileName4 = messDir+"SubgraphProcess1\\user_url.txt";// args[3];//usercount.txt
+		String destFileName4 = messDir+"SubgraphProcess1\\user_url.txt";// args[4];//usercount.txt
 		BufferedReader br = null;
 		FileReader reader = null;
 		Map<String, Long> maps = new LinkedHashMap<String, Long>();
