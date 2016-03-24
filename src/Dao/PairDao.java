@@ -31,9 +31,9 @@ public class PairDao {
 	}
 	
 	
-	public List<Pair> QueryUserPair(Pair pair) {
+	public List<Pair> QueryUserPair(String uid) {
 		java.sql.Connection connection = DBConnection.getConnection();
-		String sql = "select * from pair where user=" + pair.getUser();
+		String sql = "select * from pair where user=" + uid;
 		java.sql.PreparedStatement pstmt = DBConnection.getPreparedStatement(connection, sql);
 		List<Pair> pairlist = new ArrayList<Pair>();
 		//System.out.println(sql);

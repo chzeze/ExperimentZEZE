@@ -12,8 +12,9 @@ import util.FileWriteUtil;
  * 
  * @ClassName: CntUserFriends
  * @Description:计算用户的转发朋友数
- *              输入：userid_pair.csv
- *              输出：user_friends.txt
+ *              输入(目录：FilterPairUID)：userid_pair.csv
+                                               输出(目录：DisJoint)：user_friends.txt（uid+friends）
+
  * @author zeze
  * @date 2016年3月18日 下午12:59:04
  *

@@ -14,10 +14,11 @@ import util.FileWriteUtil;
 
 /**
  * 
- * @ClassName: TestDisjoint 并查集子图生成算法
- * @Description:并查集算法，输入：user_id_pair.txt
- *                      输出：belong.txt
- *                          subgraph.txt 
+ * @ClassName: TestDisjoint
+ * @Description:并查集算法生成子图
+ *              输入(目录：SubgraphProcess1)：user_id_pair.txt
+ *              输出(目录：DisJoint)：belong.txt(每个节点对应子图的根节点)
+ *                                subgraph.txt(子图的根节点、该子图点的数目)
  * @author zeze
  * @date 2016年3月11日 下午2:22:47
  *

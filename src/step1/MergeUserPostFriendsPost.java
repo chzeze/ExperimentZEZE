@@ -12,9 +12,10 @@ import util.FileWriteUtil;
  * 
 	* @ClassName: MergeUserPostFriendsPost 
 	* @Description:  合并用户发帖数和朋友发布数
-	*                输入：user_post.txt;
-	*                    user_friends_friendspost.txt;
-	*                输出：user_post_friends_friendspost.txt;(格式:uid+post+friends+FriendsPost)
+	*                输入(目录：DisJoint)：user_post.txt;
+	                    (目录：DisJoint): user_friends_friendspost.txt;
+                                                             输出(目录：DisJoint)：user_post_friends_friendspost.txt;(格式:uid+post+friends+FriendsPost)
+
 	* @author zeze
 	* @date 2016年3月18日 下午3:40:22 
 	*

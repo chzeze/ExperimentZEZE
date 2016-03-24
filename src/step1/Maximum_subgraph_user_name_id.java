@@ -15,9 +15,10 @@ import util.FileWriteUtil;
  * 
  * @ClassName: Maximum_subgraph_user_name_id
  * @Description: 获取最大子图中用户名和ID关系 
- *               输入：belong.txt 
- *                   subgraph.txt
- *               输出：maximum_subgraph_user_name_id.txt
+ *               输入(目录：DisJoint)：belong.txt(每个节点对应子图的根节点)
+								   subgraph.txt(子图的根节点、该子图点的数目)
+                                                  输出(目录：DisJoint)：maximum_subgraph_user_name_id.txt
+
  * 
  * @author zeze
  * @date 2016年3月14日 下午3:02:41

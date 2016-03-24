@@ -16,7 +16,11 @@ import util.FileWriteUtil;
 /**
  * 
  * @ClassName: a04SubgraphProcess
- * @Description: 根据MegerPair中获取的用户关系对，生成用户对编号：user_id_pair.txt
+ * @Description: 根据MegerPair中获取的用户关系对，生成用户对编号：user_id_pair.txt,计算用户总数
+ *               输入(目录：FilterPairUID):userid_pair.csv
+ *               输出(目录：SubGraphProcess):user_id_pair.txt
+ *                                       user_name_id.txt; 
+                                         usercount.txt
  * @author zeze
  * @date 2016年3月9日 下午4:02:14
  *

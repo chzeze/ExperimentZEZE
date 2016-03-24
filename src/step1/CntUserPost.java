@@ -12,8 +12,8 @@ import util.FileWriteUtil;
  * 
  * @ClassName: CntUserPost
  * @Description:计算用户发布帖子的数量
- *              输入：msgiduserid_nameX.csv
- *              输出：user_post.txt
+ *              输入(目录：FilterPairUID)：msgiduserid_nameX.csv
+ *              输出(目录：DisJoint)：user_post.txt
  * @author zeze
  * @date 2016年3月18日 下午12:59:04
  *

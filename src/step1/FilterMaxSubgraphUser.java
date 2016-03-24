@@ -14,11 +14,12 @@ import util.FileWriteUtil;
  * 
  * @ClassName: FilterMaxSubgraphUser
  * @Description: 过滤不在最大子图中的用户信息,并且用户发布信息大于5条，朋友数大于5
- *               输入：user_post_friends_friendspost.txt;
- *               maximum_subgraph_user_name_id.txt;
- *               输出：MaxSubgraph_user_post_friends_friendspost.txt;(格式:uid+post+
- *               friends+FriendsPost)
- *               导入数据到数据表：maxsubgraph
+ *               输入(目录：DisJoint):user_post_friends_friendspost.txt;
+                    (目录：DisJoint): maximum_subgraph_user_name_id.txt;
+                                                  输出：MaxSubgraph_user_post_friends_friendspost.txt;
+                     (格式:uid+post+friends+FriendsPost)
+                                                  插入数据库表：maxsubgraph
+
  * @author zeze
  * @date 2016年3月18日 下午3:40:22
  *

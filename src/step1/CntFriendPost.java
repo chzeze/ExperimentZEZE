@@ -12,9 +12,9 @@ import util.FileWriteUtil;
  * 
  * @ClassName: MergeFriendPost
  * @Description:计算合并每个用户朋友的发帖数
- *              输入：user_post.csv
- *                  userid_pair.csv
- *              输出：user_friends_post.txt(格式：uid+friends_post)
+ *              输入(目录：DisJoint)：user_post.csv
+ *                 (目录：FilterPairUID):userid_pair.csv
+ *              输出(目录：DisJoint)：user_friends_post.txt(格式：uid+friends_post)
  * @author zeze
  * @date 2016年3月18日 下午12:59:04
  *

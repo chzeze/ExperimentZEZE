@@ -20,9 +20,11 @@ import util.FileReadUtil;
 
 /**
  * 
-	* @ClassName: MergePair (获取有转发关系的用户对)
-	* @Description:  输入：msgid_usernameid.csv(消息ID}||}用户ID);usernameid_msgid.csv(用户ID}||}转发消息) 
-	*                输出：userid_pair.csv(有转发关系的用户)
+	* @ClassName: MergePair 
+	* @Description:获取有转发关系的用户ID对 
+	*              输入(目录：FilterPairUID)：msgid_usernameid.csv(消息ID}||}用户ID);
+	*                                     usernameid_msgid.csv(用户ID}||}转发消息) 
+	*              输出(目录：FilterPairUID)：userid_pair.csv(有转发关系的用户)
 	* @author zeze
 	* @date 2016年3月23日 下午4:44:36 
 	*

@@ -3,6 +3,8 @@ package Dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import bean.UserTimeMood;
 import util.DBConnection;
@@ -62,5 +64,34 @@ public class TimeMoodDao {
 		}
 		return userTimeMood1;
 	}
-
+    
+	//查询一个用户所有的情绪值
+	public List<UserTimeMood> QueryUserAllMood(String uid) {
+        java.sql.Connection connection = DBConnection.getConnection();
+        String sql = "select * from usertimemood where uid=" + uid;
+        java.sql.PreparedStatement pstmt = DBConnection.getPreparedStatement(connection, sql);
+        List<UserTimeMood> userMoodlist = new ArrayList<UserTimeMood>();
+        //System.out.println(sql);
+        try {
+            Statement stmt = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            java.sql.ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+            	UserTimeMood usermood = new UserTimeMood();
+            	usermood.setId(rs.getInt(1));
+            	usermood.setUid(rs.getString(2));
+            	usermood.setMood(rs.getInt(3));
+            	usermood.setTime(rs.getInt(4));
+                userMoodlist.add(usermood);
+               // System.out.println(usermood);
+            }
+            rs.last();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        finally {
+            DBConnection.close(connection, pstmt, null);
+        }
+        return userMoodlist;
+    }
 }

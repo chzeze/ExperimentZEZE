@@ -17,7 +17,10 @@ import util.FileReadUtil;
 /**
  * 
  * @ClassName: FilterNegativeReadFileBZ2
- * @Description: 提取源数据中带有消极情感表情的帖子，输入:negative.txt;输出： mess_emoticonX.csv
+ * @Description: 提取分月源数据中带有消极情感表情的微博
+ *               输入(目录：201511TO201602):negative.txt;
+ *                  (目录：SortDataMonth):message_2015_0X_Group
+ *               输出(目录：FilterMood)： mess_emoticonX.csv
  * @author zeze
  * @date 2016年3月8日 上午10:20:21
  *
@@ -84,11 +87,13 @@ public class FilterNegativeReadFileCsv {
 		File file1 = new File(fileName1);
 		File[] files1 = file1.listFiles();
 		int count=0;
+		int total=0;
 		for (File f1 : files1) {
 			if (f1.getName().endsWith(".csv")) {
 				System.out.println(f1.getPath());
 				// 读取
 				try {
+					total=0;
 					fw = new FileWriter(new File(dir2 + "mess_emoticon" +(count++)+ ".csv"), true);
 					bw = new BufferedWriter(fw);
 					pw = new PrintWriter(bw);
@@ -101,20 +106,18 @@ public class FilterNegativeReadFileCsv {
 						String[] ss = s.split(",");
 						if (ss.length != 16)
 							continue;
-						if (!"".equals(ss[4])) {
-							continue;
-						}
 						String content = ss[5];
 						for (String emoction : set) {
-							if (content.contains(emoction)) {
+							if (content.contains(emoction)) {//过滤包含有消极表情的微博
 				//0消息ID,1用户ID,2用户名,3屏幕名,4转发消息ID,5消息内容,6消息URL,7来源,8图片URL,9音频URL,10视频URL,11地理坐标,12转发数,13评论数,14赞数,15发布时间
-								pw.write(ss[1] + "}|||}"+"-1"+ "}|||}" + ss[3] + "}|||}"+ss[5]+ "}|||}" + ss[15] + "\n");
+								pw.write(s + "}|||}"+"-1"+ "\n");
 								cnt++;
+								total++;
 								break;
 							}
-						}
-						// pw.write(s + "\n");
+						}						
 					}
+					System.out.println(count+":"+total);
 				}
 				catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block

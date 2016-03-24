@@ -15,7 +15,9 @@ import util.FileReadUtil;
 /**
  * 
  * @ClassName: SortDataMonth2
- * @Description:按2015年月份分类源数据集，输出为： message_2015_0X_Group.csv
+ * @Description:按2015年月份分类源数据集
+ *              输入：(目录：sinaweb) 原数据集
+ *              输出：(目录：SortDataMonth) message_2015_0X_Group.csv
  * @author zeze
  * @date 2016年3月9日 下午3:31:03
  *

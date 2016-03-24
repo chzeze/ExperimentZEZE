@@ -15,10 +15,11 @@ import util.FileReadUtil;
 
 /**
  * 
- * @ClassName: FilterPair3(从数据集中分离屏幕名发布的消息ID，分离屏幕名转发的消息的ID)
- * @Description: 输入：原始数据集, 
- *               输出：msgiduserid_name.csv(消息ID}||}用户ID);
- *                   usernameid_msgid.csv(用户ID}||}转发消息)
+ * @ClassName: FilterPair3
+ * @Description: (从数据集中分离屏幕名发布的消息ID，分离屏幕名转发的消息的ID)
+ *               输入(目录：FilterMood)： mess_emoticonX.csv 
+ *               输出(目录：FilterPairUID)：msgiduserid_name.csv(消息ID}||}用户ID);
+ *                                      usernameid_msgid.csv(用户ID}||}转发消息)
  * @author zeze
  * @date 2016年3月16日 上午10:39:19
  *
@@ -27,7 +28,7 @@ import util.FileReadUtil;
 public class FilterPair3 {
 	public static void main(String[] args) {
 		// Map<String, Integer> maps = new HashMap<String, Integer>();
-		String messDir = "I:\\毕业设计\\数据集\\201511TO201602\\SortDataMonth";
+		String messDir = "I:\\毕业设计\\数据集\\201511TO201602\\FilterMood";
 		String destDir = "I:\\毕业设计\\数据集\\201511TO201602\\FilterPairUID\\";
 
 		// Map<String, String> msgIduserNameMaps=new LinkedHashMap<String,
@@ -46,7 +47,7 @@ public class FilterPair3 {
 		String destFile2 = destDir + "usernameid_msgid.csv";
 		File file1 = new File(messDir);
 		int cnt=1;
-		int cntpair0=1;
+		int cntpair0=0;
 		int cntpair1=1;
 		int page=1;
 		File[] files1 = file1.listFiles();
@@ -80,7 +81,7 @@ public class FilterPair3 {
 								fw1 = new FileWriter(new File(destFile1), true);
 								bw1 = new BufferedWriter(fw1);
 								pw1 = new PrintWriter(bw1);
-								cntpair0=1;
+								cntpair0=0;
 								page++;
 								
 							}
